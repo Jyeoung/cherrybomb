@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.contain{position: relative;}
+
+		#c1{width: 280px; height: auto; position: absolute; top: 480px; left: -9px;
+			}
+		#c1:hover {cursor: pointer;}
+		#c2{width: 1300px; height: auto; position: absolute; top: -8px; left: 211px}
+		#c2:hover {cursor: pointer;}
+		#b3{width: 750px; height: auto; position: absolute; top: 200px; left: 150px; visibility: hidden;}
+		#b5{width: 350px; height: auto; position: absolute; top: 500px; left: 742px; visibility: hidden; z-index: 2; }
+		#b6{width: 550px; height: auto; position: absolute; top: 870px; left: 829px; visibility: hidden; transition-delay: 0.2s; }
+		#b4{width: 120px; height: auto; position: absolute; top: 1670px; left: 670px;}
+		#b4:hover {cursor: pointer;}
+
+		#ywf {font-family: 'arial black header', sans-serif; transform: scaleX(1.15);font-weight: 900; position: absolute; z-index: 2; font-size: 4em; top: 584px; left: 520px; opacity: 0;
+			animation: ywf 0.2s infinite; margin: auto; 
+			animation-delay: 2s;}
+		@keyframes ywf {
+			0% {color : #fe0058; opacity: 1;}
+			30% {color: #fff100; opacity: 1;}
+			40% {color: #01bdd5; opacity: 1;}
+			60% {color: #01bdd5; opacity: 1;}
+			100% {color: #db060c; opacity: 1;}
+		
+		/*#ncb {font-family: 'arial black header', sans-serif; transform: scaleX(1.15);font-weight: 900; position: absolute; z-index: 2; font-size: 4em; top: 584px; left: 20px; opacity: 0;
+			animation: ncb 0.2s infinite; margin: auto; 
+			animation-delay: 2s;}
+		@keyframes ncb {
+			0% {color : #fe0058; opacity: 1;}
+			30% {color: #fff100; opacity: 1;}
+			40% {color: #01bdd5; opacity: 1;}
+			60% {color: #01bdd5; opacity: 1;}
+			100% {color: #db060c; opacity: 1;}
+		*/
+	</style>
+</head>
+
+
+<body class="contain" style="background-color: #fd69c8;">
+
+	<div >
+		<img id="c1" src="c1.png">
+	</div>
+	<div>
+		<img id="c2" src="c2.png">
+	</div>	
+	<div>
+		<img id="b3" src="b3.gif">
+	</div>
+	<div>
+		<img id="b5" src="b5.gif">
+	</div>
+	<div>
+		<img id="b6" src="b6.gif">
+	</div>
+	<div>
+		<img id="b4" src="b4.gif">
+		<audio id="mu">
+			<source src="CHERRY BOMB - Tyler, the Creator.mp3" type="audio/mp3">
+		</audio>
+	</div>
+
+
+	<div id="ywf">
+	</div>
+	<div id="ncb">
+	</div>
+
+	<script type="text/javascript">
+
+	var a=0,ywf;
+		ywf = "THAT'S HOW IT'S SUPPOSED TO BE LIVING YOUNG & WILD & FREE"
+
+		function typing1() {
+			if(a<ywf.length){
+				document.getElementById("ywf").innerHTML += ywf.charAt(a);
+				a++;
+				setTimeout(typing1,170);
+			}
+		}
+		typing1();
+
+	/*var b=0,ncb;
+		ncb = "빨리빨리 피해 RIGHT CHERRY BOMB FEEL IT YUM 빨리빨리 피해 RIGHT CHERRY BOMB FEEL IT YUM 빨리빨리 피해 RIGHT CHERRY BOMB FEEL IT YUM 빨리빨리 피해 RIGHT CHERRY BOMB FEEL IT YUM"
+
+		function typing2() {
+			if(b<ncb.length){
+				document.getElementById("ncb").innerHTML += ncb.charAt(b);
+				b++;
+				setTimeout(typing2,110);
+			}
+		}
+		typing2();
+	*/
+	var toggle = "off"	
+	c2.onclick = function(){
+		if(toggle == "off"){
+			toggle = "on";
+				
+			b3.style.visibility = "visible"
+
+		}else{
+			toggle = "off";
+			b3.style.visibility = "hidden"
+			
+			}
+		}
+
+	var toggle = "off"	
+	c1.onclick = function(){
+		if(toggle == "off"){
+			toggle = "on";
+				
+			b5.style.visibility = "visible"
+			b6.style.visibility = "visible"
+
+		}else{
+			toggle = "off";
+
+			b5.style.visibility = "hidden"
+			b6.style.visibility = "hidden"
+
+
+			}
+		}
+
+	var toggle = "off"   
+    b4.onclick = function(){
+      if(toggle == "off"){
+         mu.play();
+         toggle = "on";
+         
+
+      }else{
+      	(toggle=="on")
+         toggle = "off";
+         mu.pause();
+         }
+      }
+
+	</script>
+
+</body>
+</html>
